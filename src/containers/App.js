@@ -26,7 +26,6 @@ class App extends Component {
         users.forEach((element) => {
             element.dropRate = percentage;
             percentage -= 0.05;
-            console.log();
         });
         return users.filter((element) => element.dropRate < randomNum);
     }
