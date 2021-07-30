@@ -5,7 +5,7 @@ const Card = ({ id, username, name, email, droprate }) => {
             <div className="tc">
                 <h2>{name}</h2>
                 <p>{email}</p>
-                <p>{1 - droprate}</p>
+                <p>{(1 - droprate).toFixed(2)} %</p>
             </div>
         </div>
     );

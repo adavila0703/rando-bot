@@ -22,7 +22,7 @@ class App extends Component {
 
     randoDrop(users) {
         let percentage = 0.5;
-        let randomNum = (Math.random() * 10) / 10;
+        let randomNum = Math.random();
         users.forEach((element) => {
             element.dropRate = percentage;
             percentage -= 0.05;
