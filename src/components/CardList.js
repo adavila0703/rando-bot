@@ -1,22 +1,18 @@
 import Card from "./Card";
 
-const CardList = ({ robots }) => {
-    return (
-        <div>
-            {robots.map((user, i) => {
-                return (
-                    <Card
-                        key={i}
-                        id={robots[i].id}
-                        name={robots[i].name}
-                        username={robots[i].username}
-                        email={robots[i].email}
-                        droprate={robots[i].dropRate}
-                    />
-                );
-            })}
-        </div>
-    );
-};
+const CardList = ({ robots }) => (
+    <div>
+        {robots.map(({ id, name, username, email, dropRate }, i) => (
+            <Card
+                key={i}
+                id={id}
+                name={name}
+                username={username}
+                email={email}
+                droprate={dropRate}
+            />
+        ))}
+    </div>
+);
 
 export default CardList;
